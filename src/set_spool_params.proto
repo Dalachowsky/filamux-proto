@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+package filamux;
+
+message SetSpoolParamsReq {
+    required int32 index = 1;       // Which spool to change
+    required int32 length = 2;      // Current spool length
+};
+
+message SetSpoolParamsRes {
+    required bool ok = 1;
+    optional string reason = 255;
+}

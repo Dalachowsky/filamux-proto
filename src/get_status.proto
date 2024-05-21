@@ -1,0 +1,25 @@
+syntax = "proto2";
+
+package filamux;
+
+message GetStatusReq {
+};
+
+message GetStatusRes {
+    enum Status {
+        OK = 1;
+        FILAMENT_EXCHANGE = 2;
+        ERROR = 100;
+        ERROR_FILAMENT_RUNOUT = 101;
+    };
+
+    enum StatusExchange {
+        RETRACTING = 1; // Retracting from hotend
+        CHANGING = 2;   // Changing filament in extruder
+        FEEDING = 3;    // Feeding to hotend 
+    };
+
+    required Status status; 
+    optional StatusExchange statusExchange; // Present if status == FILAMENT_EXCHANGE
+    required int32 currentSpool;
+}

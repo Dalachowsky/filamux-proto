@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+package filamux;
+
+enum MessageType {
+    MSG_GET_SPOOL_PARAMS = 1;
+    MSG_SET_SPOOL_PARAMS = 2;
+    MSG_SET_TARGET_SPOOL = 3;
+    MSG_GET_STATUS = 4;
+    MSG_EXTRUDER_GCODE = 10;
+};

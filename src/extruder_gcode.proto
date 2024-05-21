@@ -1,0 +1,15 @@
+syntax = "proto2";
+
+package filamux;
+
+message ExtruderGCodeReq {
+    required string gcode = 1;
+};
+
+message ExtruderGCodeRes {
+    enum Status {
+        OK = 1;
+        ERROR = 10;
+    };
+    required Status status; 
+}
