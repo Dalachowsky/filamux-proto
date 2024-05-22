@@ -11,5 +11,5 @@ message ExtruderGCodeRes {
         OK = 1;
         ERROR = 10;
     };
-    required Status status; 
+    required Status status = 1; 
 }

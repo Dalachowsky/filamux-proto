@@ -19,7 +19,7 @@ message GetStatusRes {
         FEEDING = 3;    // Feeding to hotend 
     };
 
-    required Status status; 
-    optional StatusExchange statusExchange; // Present if status == FILAMENT_EXCHANGE
-    required int32 currentSpool;
+    required Status status = 1; 
+    optional StatusExchange statusExchange = 2; // Present if status == FILAMENT_EXCHANGE
+    required int32 currentSpool = 3;
 }

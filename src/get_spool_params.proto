@@ -9,5 +9,4 @@ message GetSpoolParamsReq {
 message GetSpoolParamsRes {
     required bool active = 1;
     required int32 lengthRemaining = 2;
-    required string name = 3;
 }
