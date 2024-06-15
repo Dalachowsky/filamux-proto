@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+package filamux;
+
+message ExtruderFeedReq {
+  required uint32 speed = 1;
+  required int32 distance = 2;
+};
+
+message ExtruderFeedRes {
+  required bool ok = 1;
+  optional string reason = 255;
+}

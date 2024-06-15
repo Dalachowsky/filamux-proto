@@ -8,7 +8,8 @@ message GetStatusReq {
 message GetStatusRes {
     enum Status {
         OK = 1;
-        FILAMENT_EXCHANGE = 2;
+        FILAMENT_EXCHANGE = 3;
+        FILAMENT_FEEDING = 2;
         ERROR = 100;
         ERROR_FILAMENT_RUNOUT = 101;
     };
