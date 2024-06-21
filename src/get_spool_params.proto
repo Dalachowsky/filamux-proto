@@ -2,11 +2,10 @@ syntax = "proto2";
 
 package filamux;
 
-message GetSpoolParamsReq {
-    required int32 index = 1;
-};
+message GetSpoolParamsReq { required int32 index = 1; };
 
 message GetSpoolParamsRes {
-    required bool active = 1;
-    required int32 lengthRemaining = 2;
+  required int32 index = 1;
+  optional bool active = 2;
+  optional int32 length = 3;
 }
